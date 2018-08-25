@@ -26,9 +26,9 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class EchoService {
-	public String echo(String text) {
-		Objects.requireNonNull(text);
+    public String echo(String text) {
+	Objects.requireNonNull(text);
 
-		return "echo: " + text;
-	}
+	return "echo: " + text;
+    }
 }

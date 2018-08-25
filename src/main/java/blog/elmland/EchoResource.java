@@ -26,9 +26,9 @@ import javax.ws.rs.Path;
 @Path("echo")
 public class EchoResource {
 
-	@GET
-	public String ping() {
-		return "hello";
-	}
+    @GET
+    public String ping() {
+	return "hello";
+    }
 
 }
