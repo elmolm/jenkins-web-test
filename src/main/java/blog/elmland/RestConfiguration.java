@@ -23,6 +23,6 @@ import javax.ws.rs.core.Application;
  * @author Florian Schmidt
  */
 @ApplicationPath("v1")
-public class JAXRSConfiguration extends Application {
+public class RestConfiguration extends Application {
 
 }

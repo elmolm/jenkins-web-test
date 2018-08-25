@@ -28,7 +28,7 @@ import javax.ws.rs.Path;
 public class EchoResource {
 
   @EJB
-  private EchoService eService;
+  private EchoService echoService;
 
   /**
    * Echo GET.
@@ -37,7 +37,7 @@ public class EchoResource {
    */
   @GET
   public String echo() {
-    return eService.echo(Instant.now().toString());
+    return echoService.echo(Instant.now().toString());
   }
 
 }
