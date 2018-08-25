@@ -22,6 +22,21 @@
 	</dependencies>
 	<build>
 		<finalName>jenkins-web-test</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<configLocation>google_checks.xml</configLocation>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+		</plugins>
 	</build>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
