@@ -1,22 +1,19 @@
 /*
  * Copyright 2018 Florian Schmidt
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
  */
 package blog.elmland;
 
 import java.time.Instant;
-
 import javax.ejb.EJB;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -29,17 +26,17 @@ import javax.ws.rs.Path;
 @Path("echo")
 public class EchoResource {
 
-    @EJB
-    private EchoService eService;
+  @EJB
+  private EchoService eService;
 
-    /**
-     * Echo GET.
-     * 
-     * @return echo string ;)
-     */
-    @GET
-    public String echo() {
-	return eService.echo(Instant.now().toString());
-    }
+  /**
+   * Echo GET.
+   * 
+   * @return echo string ;)
+   */
+  @GET
+  public String echo() {
+    return eService.echo(Instant.now().toString());
+  }
 
 }
