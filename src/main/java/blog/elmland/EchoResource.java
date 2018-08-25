@@ -15,6 +15,9 @@
  */
 package blog.elmland;
 
+import java.time.Instant;
+
+import javax.ejb.EJB;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
@@ -26,9 +29,17 @@ import javax.ws.rs.Path;
 @Path("echo")
 public class EchoResource {
 
+    @EJB
+    private EchoService eService;
+
+    /**
+     * Echo GET.
+     * 
+     * @return echo string ;)
+     */
     @GET
-    public String ping() {
-	return "hello";
+    public String echo() {
+	return eService.echo(Instant.now().toString());
     }
 
 }
