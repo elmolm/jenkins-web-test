@@ -18,6 +18,11 @@ package blog.elmland;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
+/**
+ * REST config.
+ * 
+ * @author Florian Schmidt
+ */
 @ApplicationPath("v1")
 public class JAXRSConfiguration extends Application {
 

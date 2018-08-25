@@ -19,6 +19,11 @@ import java.util.Objects;
 
 import javax.ejb.Stateless;
 
+/**
+ * Simple echo service.
+ * 
+ * @author Florian Schmidt
+ */
 @Stateless
 public class EchoService {
 	public String echo(String text) {
