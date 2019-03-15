@@ -1,5 +1,6 @@
 
-# Created by https://www.gitignore.io/api/java,maven,eclipse
+# Created by https://www.gitignore.io/api/java,maven,eclipse,gradle
+# Edit at https://www.gitignore.io/?templates=java,maven,eclipse,gradle
 
 ### Eclipse ###
 
@@ -69,6 +70,8 @@ local.properties
 # Annotation Processing
 .apt_generated
 
+.sts4-cache/
+
 ### Java ###
 # Compiled class file
 *.class
@@ -106,5 +109,23 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+### Gradle ###
+.gradle
+build/
 
-# End of https://www.gitignore.io/api/java,maven,eclipse
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
+
+# End of https://www.gitignore.io/api/java,maven,eclipse,gradle
