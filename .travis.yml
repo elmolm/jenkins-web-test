@@ -1,2 +1,22 @@
 language: java
-jdk: oraclejdk8
+jdk: 
+  - oraclejdk8
+  - oraclejdk11
+os:
+  - linux
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+  - $HOME/.gradle
+
+script:
+  - jdk_switcher use oraclejdk8
+  - mvn test -B
+  - ./gradlew build -s
+  - jdk_switcher use openjdk11
+  - ./gradlew build -s
+  - mvn test -B
