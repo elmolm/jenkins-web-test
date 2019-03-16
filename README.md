@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/elmolm/jenkins-web-test.svg?branch=master)](https://travis-ci.org/elmolm/jenkins-web-test)
+
 # jenkins-web-test
 
 # Build
