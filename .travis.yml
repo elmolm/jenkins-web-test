@@ -4,6 +4,7 @@ jdk:
   - oraclejdk11
 os:
   - linux
+  - osx
 
 branches:
   only:
@@ -14,9 +15,5 @@ cache:
   - $HOME/.gradle
 
 script:
-  - jdk_switcher use oraclejdk8
-  - mvn test -B
-  - ./gradlew build -s
-  - jdk_switcher use openjdk11
   - ./gradlew build -s
   - mvn test -B
