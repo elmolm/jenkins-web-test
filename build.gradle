@@ -24,7 +24,6 @@ dependencies {
 }
 
 group = 'blog.elmland'
-version = '1.2-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 tasks.withType(JavaCompile) {
