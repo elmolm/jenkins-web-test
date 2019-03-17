@@ -7,11 +7,8 @@ plugins {
     id 'java'
     id 'eclipse'
 	id 'war'
-    id "com.jfrog.artifactory" version "4.9.3"
-    id 'maven-publish'
     id 'net.researchgate.release' version '2.6.0'
 }
-
 
 repositories {
     mavenLocal()
@@ -28,37 +25,4 @@ sourceCompatibility = '1.8'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.web
-        }
-    }
- }
-
-artifactory {
-    contextUrl = "${artifactory_contextUrl}"   //The base Artifactory URL if not overridden by the publisher/resolver
-    publish {
-        repository {
-            repoKey = 'gradle-dev-local'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
-            maven = true
-
-        }
-        defaults {
-            publications ('mavenJava')
-        }
-    }
-    resolve {
-        repository {
-            repoKey = 'gradle-dev'
-            username = "${artifactory_user}"
-            password = "${artifactory_password}"
-            maven = true
-
-        }
-    }
 }
