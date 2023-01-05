@@ -15,7 +15,7 @@
 package blog.elmland;
 
 import java.util.Objects;
-import javax.ejb.Stateless;
+import jakarta.ejb.Stateless;
 
 /**
  * Simple echo service.

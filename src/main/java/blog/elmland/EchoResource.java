@@ -15,9 +15,9 @@
 package blog.elmland;
 
 import java.time.Instant;
-import javax.ejb.EJB;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import jakarta.ejb.EJB;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
 /**
  * Simple echo REST resource.
